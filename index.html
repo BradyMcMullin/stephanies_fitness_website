@@ -147,3 +147,127 @@
         .card {
             background: white;
             padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            text-transform: uppercase;
+            margin-top: 0;
+        }
+
+        .contact-info {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1><span class="logo-ss">SS</span> FITNESS</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Personalized Training for Your Goals</h2>
+        <p>Passionate about health, fitness, and helping others. I am an ISSA Certified Personal Trainer serving the St. George and Washington, UT area.</p>
+        <button class="btn" onclick="bookConsultation()">Book a Consultation</button>
+    </div>
+
+    <section id="about">
+        <h2 class="section-title">About Stephanie</h2>
+        <div class="about-content">
+            <p>I am a motivated, certified trainer with a strong foundation in fitness programming, client motivation, and injury prevention.</p>
+            <p>I am CPR-certified and committed to helping clients achieve their health and wellness goals through personalized training plans and positive support.</p>
+            <p><strong>Certifications:</strong> Certified Personal Trainer (ISSA) | CPR/AED Certified (ISSA)</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">My Services & Skills</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Strength & Conditioning</h3>
+                <p>Personalized fitness programming focusing on strength training and cardiovascular health to build a resilient body.</p>
+            </div>
+            <div class="card">
+                <h3>Goal Setting & Assessment</h3>
+                <p>Comprehensive client assessment and goal setting to track progress and adjust workouts as needed.</p>
+            </div>
+            <div class="card">
+                <h3>Nutrition & Safety</h3>
+                <p>Guidance on nutrition fundamentals alongside a strong focus on injury prevention and proper exercise form.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Let's Get Started</h2>
+        <div class="contact-info">
+            <p>Ready to begin your fitness journey? Reach out to me directly!</p>
+            <p><strong>Email:</strong> <a href="mailto:Steph3563@gmail.com">Steph3563@gmail.com</a></p>
+            <p><strong>Phone:</strong> (435) 467-8191</p>
+            <p><strong>Location:</strong> Washington / St. George, UT 84780</p>
+            <br><br>
+            <a href="mailto:Steph3563@gmail.com?subject=Personal Training Inquiry" class="btn" style="color: white;">Email Me Today</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 SS Fitness. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Placeholder function for booking button
+        function bookConsultation() {
+            alert("Thanks for your interest! Online booking is currently under construction. Please scroll down to the Contact section to email or call Stephanie directly to schedule your consultation.");
+        }
+    </script>
+</body>
+</html>
