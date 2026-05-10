@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephanie Smith Fitness | ISSA Certified Personal Trainer</title>
+    <title>SS Fitness | ISSA Certified Personal Trainer</title>
     <style>
         /* CSS Styling */
         :root {
@@ -29,6 +29,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         nav {
@@ -40,9 +41,20 @@
             padding: 0 20px;
         }
 
+        /* Professional Text Logo Styling */
         nav h1 {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .logo-ss {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 0;
         }
 
         nav ul {
@@ -58,6 +70,9 @@
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
         }
 
         nav a:hover {
@@ -74,6 +89,8 @@
         .hero h2 {
             font-size: 2.5rem;
             margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .hero p {
@@ -85,13 +102,15 @@
         .btn {
             background-color: var(--accent-color);
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
             border-radius: 5px;
             font-size: 1.1rem;
             cursor: pointer;
             text-decoration: none;
             transition: background 0.3s;
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
         .btn:hover {
@@ -108,12 +127,15 @@
             text-align: center;
             color: var(--primary-color);
             margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
         }
 
         .about-content {
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
+            font-size: 1.1rem;
         }
 
         .services-grid {
@@ -124,110 +146,4 @@
 
         .card {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .card h3 {
-            color: var(--accent-color);
-        }
-
-        .contact-info {
-            text-align: center;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <nav>
-            <h1>Stephanie Smith Fitness</h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="hero">
-        <h2>Personalized Training for Your Goals</h2>
-        <p>Passionate about health, fitness, and helping others. I am an ISSA Certified Personal Trainer serving the St. George and Washington, UT area.</p>
-        <button class="btn" onclick="bookConsultation()">Book a Consultation</button>
-    </div>
-
-    <section id="about">
-        <h2 class="section-title">About Stephanie</h2>
-        <div class="about-content">
-            <p>I am a motivated, certified trainer with a strong foundation in fitness programming, client motivation, and injury prevention.</p>
-            <p>I am CPR-certified and committed to helping clients achieve their health and wellness goals through personalized training plans and positive support.</p>
-            <p><strong>Certifications:</strong> Certified Personal Trainer (ISSA) | CPR/AED Certified (ISSA)</p>
-        </div>
-    </section>
-
-    <section id="services">
-        <h2 class="section-title">My Services & Skills</h2>
-        <div class="services-grid">
-            <div class="card">
-                <h3>Strength & Conditioning</h3>
-                <p>Personalized fitness programming focusing on strength training and cardiovascular health to build a resilient body.</p>
-            </div>
-            <div class="card">
-                <h3>Goal Setting & Assessment</h3>
-                <p>Comprehensive client assessment and goal setting to track progress and adjust workouts as needed.</p>
-            </div>
-            <div class="card">
-                <h3>Nutrition & Safety</h3>
-                <p>Guidance on nutrition fundamentals alongside a strong focus on injury prevention and proper exercise form.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2 class="section-title">Let's Get Started</h2>
-        <div class="contact-info">
-            <p>Ready to begin your fitness journey? Reach out to me directly!</p>
-            <p><strong>Email:</strong> <a href="mailto:Steph3563@gmail.com">Steph3563@gmail.com</a></p>
-            <p><strong>Phone:</strong> (435) 467-8191</p>
-            <p><strong>Location:</strong> Washington / St. George, UT 84780</p>
-            <br>
-            <a href="mailto:Steph3563@gmail.com?subject=Personal Training Inquiry" class="btn">Email Me Today</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Stephanie Smith Fitness. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Placeholder function for booking button
-        function bookConsultation() {
-            alert("Thanks for your interest! Online booking is currently under construction. Please scroll down to the Contact section to email or call Stephanie directly to schedule your consultation.");
-        }
-    </script>
-</body>
-</html>
+            padding: 30px 20px;
